@@ -17,8 +17,8 @@ jobs:
       - name: docker login 
         run: docker login -u ${{secrets.DOCKERHUBUSERNAME}} -p ${{secrets.DOCKERHUBPASSWORD}}
       - name: docker build 
-        run: cd testenv && docker build . -t fast_api:prajesh
+        run: cd testenv && docker build . -t fast_api:satyam
       - name: test
         run: echo "hello"
       - name: docker tag & push  
-        run: docker tag fast_api:prajesh shubhambawa98/testlkm:prajesh && docker push shubhambawa98/testlkm:prajesh
+        run: docker tag fast_api:satyam shubhambawa98/testlkm:satyam && docker push shubhambawa98/testlkm:satyam
